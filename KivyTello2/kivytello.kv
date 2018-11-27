@@ -1,0 +1,37 @@
+#: import Joystick joystick
+
+<DragableJoystick>
+
+<JoystickPanel@BoxLayout>
+    orientation: 'vertical'
+    Label:
+        id: label
+    DragableJoystick:
+        id: stick
+        sticky: False
+
+<KivyTelloRoot>:
+    orientation: 'vertical'
+    BoxLayout:
+        size_hint: 1, 0.2
+        orientation: 'horizontal'
+        Button:
+            id: quit
+            text: 'QUIT'
+        ToggleButton:
+            id: takeoff
+            text: 'TAKEOFF' if self.state == 'normal' else 'LAND'
+        ToggleButton:
+            id: rotcw
+            text: 'START CW' if self.state == 'normal' else 'STOP CW'
+        ToggleButton:
+            id: rotccw
+            text: 'START CCW' if self.state == 'normal' else 'STOP CCW'
+    BoxLayout:
+        orientation: 'horizontal'
+        JoystickPanel:
+            id: pad_left
+        JoystickPanel:
+            id: pad_right
+
+#KivyTelloRoot:
