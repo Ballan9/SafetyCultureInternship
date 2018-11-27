@@ -7,3 +7,5 @@ The goBot folder is all written in go, due to my lack of previous knowledge of w
 The TelloPy is a Repo cloned from https://github.com/hanyazou/TelloPy (Go to this repo for in depth instructions of installing). It is a python program that runs controls and stream the video back to you computer. We have had trouble getting the AV package to install properly.
 
 https://godoc.org/gobot.io/x/gobot/platforms/dji/tello- This has in depth source code for the bot written in go 
+
+There is another repo found https://github.com/dji-sdk/Tello-Python/tree/master/Tello_Video/h264decoder which has an indepth gui that has camera feed. But requires AV and my pc wont import the AV package correctly
