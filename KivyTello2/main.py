@@ -99,7 +99,6 @@ class KivyTelloRoot(BoxLayout):
         self.drone.set_roll(self.stick_data[IDX_ROLL])
         self.drone.set_pitch(self.stick_data[IDX_PITCH])
 
-
     def stop(self):
         self.drone.quit()
         App.get_running_app().stop()
