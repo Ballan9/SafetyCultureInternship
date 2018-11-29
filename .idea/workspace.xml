@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eeeca14b-cd0f-40a5-87a1-f39f9fbaacca" name="Default" comment="Working files from github - kivy_Tello&#10;Tristan file">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/joystick/__init__.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/joystick/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/joystick/touchdata.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/joystick/touchdata.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/main.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/dispatcher.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/dispatcher.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/error.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/error.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/logger.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/logger.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/protocol.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/protocol.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/state.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/state.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/tello.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/tello.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/examples/joystick_and_video.py" afterPath="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/examples/joystick_and_video.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>takeof</find>
+      <find>take</find>
+      <find>level</find>
+      <find>date</find>
+      <find>dt</find>
+      <find>even</find>
+      <find>pk</find>
+      <find>pkt</find>
+      <find>drone</find>
+      <find>andr</find>
+      <find>cw</find>
+      <find>pad</find>
+      <find>uter_background_</find>
+      <find>outer_background_color</find>
+      <find>fra</find>
+      <find>cc</find>
+      <find>ccw</find>
+      <find>drag</find>
+      <find>kivy</find>
+      <find>dra</find>
+      <find>tel</find>
+      <find>he</find>
+      <find>hei</find>
+      <find>per</find>
+      <find>drone_battery_left</find>
+      <find>perc</find>
+      <find>state</find>
+      <find>p53</find>
+      <find>04</find>
+      <find>lan</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Practice - KivyTello-master" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Video Stream" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/joystick/joystick.kv" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/joystick/joystickpad.kv" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/joystick/joystickpad.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/crc.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/dispatcher.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/error.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/event.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/logger.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/protocol.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/state.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/tello.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/utils.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/tellopy/_internal/video_stream.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/kivytello.kv" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/joystick/touchdata.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/joystick/joystick.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/main.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/KivyTello-master/joystick/__init__.py" />
+        <option value="$PROJECT_DIR$/KivyTello-master/tellopy/examples/joystick_and_video.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/joystick/import.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/video_stream.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/__init__.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/examples/simple_takeoff.py" />
+        <option value="$PROJECT_DIR$/Original - KivyTello-master/tellopy/examples/simple_takeoff.py" />
+        <option value="$PROJECT_DIR$/Original - KivyTello-master/main.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/joystick/joystick.kv" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/stream_video_tristan.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/event.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/logger.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/joystick/joystick.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/kivytello.kv" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/main.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/error.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/dispatcher.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/state.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/examples/joystick_and_video.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/protocol.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/joystick/touchdata.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/crc.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/tellopy/_internal/tello.py" />
+        <option value="$PROJECT_DIR$/Practice - KivyTello-master/joystick/__init__.py" />
+        <option value="$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples/joystick_and_video.py" />
+        <option value="$PROJECT_DIR$/Practice - DJITelloPy-master/example.py" />
+        <option value="$PROJECT_DIR$/PracticeKivyTello/android.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-20" />
+    <option name="y" value="26" />
+    <option name="width" value="920" />
+    <option name="height" value="729" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyArgumentListInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice - DJITelloPy-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice - DJITelloPy-master" type="462c0819:PsiDirectoryNode" />
+              <item name="djitellopy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice - DJITelloPy-master" type="462c0819:PsiDirectoryNode" />
+              <item name="joystick" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice - DJITelloPy-master" type="462c0819:PsiDirectoryNode" />
+              <item name="tellopy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="Practice - DJITelloPy-master" type="462c0819:PsiDirectoryNode" />
+              <item name="tellopy" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="PracticeKivyTello" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="PracticeKivyTello" type="462c0819:PsiDirectoryNode" />
+              <item name="joystick" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="PracticeKivyTello" type="462c0819:PsiDirectoryNode" />
+              <item name="tellopy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="PracticeKivyTello" type="462c0819:PsiDirectoryNode" />
+              <item name="tellopy" type="462c0819:PsiDirectoryNode" />
+              <item name="_internal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Drone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Drone" type="462c0819:PsiDirectoryNode" />
+              <item name="PracticeKivyTello" type="462c0819:PsiDirectoryNode" />
+              <item name="tellopy" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Practice - KivyTello-master" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bel\Documents\2018.12 - JCU\2018.08.15 - CP3101 - Professional Internship\Drone\Practice - DJITelloPy-master" />
+      <recent name="C:\Users\Bel\Documents\2018.12 - JCU\2018.08.15 - CP3101 - Professional Internship\Drone\Practice - KivyTello-master\tellopy" />
+      <recent name="C:\Users\Bel\Documents\2018.12 - JCU\2018.08.15 - CP3101 - Professional Internship\Drone" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bel\Documents\2018.12 - JCU\2018.08.15 - CP3101 - Professional Internship\Drone\Practice - KivyTello-master" />
+      <recent name="C:\Users\Bel\Documents\2018.12 - JCU\2018.08.15 - CP3101 - Professional Internship\Drone\Practice - KivyTello-master\tellopy" />
+      <recent name="C:\Users\Bel\Documents\2018.12 - JCU\2018.08.15 - CP3101 - Professional Internship\Drone\Practice - KivyTello-master\tellopy\_internal" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.video_effect">
+    <configuration name="joystick_and_video (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PracticeKivyTello/tellopy/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Drone" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/joystick_and_video.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="joystick_and_video" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Drone" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples/joystick_and_video.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="simple_takeoff (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PracticeKivyTello/tellopy/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Drone" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/simple_takeoff.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="simple_takeoff" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Drone" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples/simple_takeoff.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="video_effect" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PracticeKivyTello/tellopy/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Drone" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/video_effect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.joystick_and_video" />
+      <item index="1" class="java.lang.String" itemvalue="Python.simple_takeoff" />
+      <item index="2" class="java.lang.String" itemvalue="Python.simple_takeoff (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.joystick_and_video (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.video_effect" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.video_effect" />
+        <item index="1" class="java.lang.String" itemvalue="Python.joystick_and_video (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.simple_takeoff (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.simple_takeoff" />
+        <item index="4" class="java.lang.String" itemvalue="Python.joystick_and_video" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eeeca14b-cd0f-40a5-87a1-f39f9fbaacca" name="Default" comment="" />
+      <created>1542802698995</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542802698995</updated>
+      <workItem from="1542802700597" duration="162000" />
+    </task>
+    <task id="LOCAL-00001" summary="Working files from github - kivy_Tello&#10;Tristan file">
+      <created>1543287535647</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543287535647</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Working files from github - kivy_Tello&#10;Tristan file">
+      <created>1543287833618</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543287833618</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Working files from github - kivy_Tello&#10;Tristan file">
+      <created>1543289982257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543289982257</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="162000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-20" y="26" width="920" height="729" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24186046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3963816" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3946037" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3338816" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3963816" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working files from github - kivy_Tello&#10;Tristan file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working files from github - kivy_Tello&#10;Tristan file" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PracticeKivyTello/joystick/__init__.py</url>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/video_stream.py</url>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/simple_takeoff.py</url>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/logger.py</url>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/dispatcher.py</url>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="25" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../../2017.12 - JCU/D - CP1404 - PROGRAMMING 1/Assignment2/Assignment2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2124">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/joystick/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/tellopy/examples/simple_takeoff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/tellopy/_internal/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/tellopy/_internal/protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2900">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/tellopy/_internal/state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/tellopy/_internal/tello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="274" column="8" lean-forward="true" selection-start-line="274" selection-start-column="8" selection-end-line="274" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/stream_video_tristan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Python/Lib/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - KivyTello-master/kivytello.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/joystick/joystickpad.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/kivytello.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/simple_takeoff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/video_stream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/joystick_and_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/joystick/joystick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1922">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/event.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1489">
+          <caret line="78" column="14" lean-forward="false" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/joystick/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/joystick/touchdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/crc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/error.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/joystick/joystick.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/joystick/joystickpad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/joystick/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/kivytello.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#24#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/djitellopy/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/_internal/tello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples/joystick_and_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/tellopy/examples/simple_takeoff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/tellopy/examples/video_effect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - DJITelloPy-master/djitellopy/tello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="101" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice - DJITelloPy-master/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="160" column="0" lean-forward="true" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding>
+            <element signature="e#31#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original - DJITelloPy-master/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PracticeKivyTello/android.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
