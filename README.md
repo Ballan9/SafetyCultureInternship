@@ -9,3 +9,6 @@ The TelloPy is a Repo cloned from https://github.com/hanyazou/TelloPy (Go to thi
 https://godoc.org/gobot.io/x/gobot/platforms/dji/tello- This has in depth source code for the bot written in go 
 
 There is another repo found https://github.com/dji-sdk/Tello-Python/tree/master/Tello_Video/h264decoder which has an indepth gui that has camera feed. But requires AV and my pc wont import the AV package correctly
+
+The best repo we have found atm is https://github.com/damiafuentes/DJITelloPy which has simple steps to install and has the live video streaming working. 
+In TelloSDKPy folder you will find the example.py and exampleA.py The example.py works great just doesnt save the video. The exampleA.py is the program that I was fiddling with trying to get to save the live stream
