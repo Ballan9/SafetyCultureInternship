@@ -1,5 +1,9 @@
+
+
+from cv2.cv2 import VideoCapture, VideoWriter_fourcc
+from cv2.cv2 import VideoWriter
 from djitellopy import Tello
-import cv2
+import cv2 as cv
 import pygame
 from pygame.locals import *
 import numpy as np
@@ -9,6 +13,7 @@ import time
 S = 60
 # Frames per second of the pygame window display
 FPS = 25
+
 
 
 class FrontEnd(object):
@@ -24,9 +29,11 @@ class FrontEnd(object):
 
     def __init__(self):
         # Init pygame
+        self.cv = cv2
         pygame.init()
 
         # Creat pygame window
+
         pygame.display.set_caption("Tello video stream")
         self.screen = pygame.display.set_mode([960, 720])
 
@@ -41,6 +48,26 @@ class FrontEnd(object):
         self.speed = 10
 
         self.send_rc_control = False
+
+        #Code added to save the capture as an mp4
+        self.name = 'yourMovie' + '.avi'
+        self.cap = cv.VideoCapture('wtf.avi')
+        self.fourcc = cv.VideoWriter_fourcc(*'DIVX')
+        self.out = VideoWriter(self.name, self.fourcc, 20.0,(640, 480))
+        while self.cap.isOpened():
+            ret, frame = self.cap.read()
+            if ret:
+                frame = self.cv.flip(frame, 0)
+                # write the flipped frame
+                self.out.write(frame)
+                self.cv.imshow('frame', frame)
+                if self.cv.waitKey(35) & 0xFF == ord('q'):
+                    break
+            else:
+                break
+        self.cap.release()
+        self.out.release()
+
 
         # create update timer
         pygame.time.set_timer(USEREVENT + 1, 50)
@@ -87,11 +114,12 @@ class FrontEnd(object):
                 break
 
             self.screen.fill([0, 0, 0])
-            frame = cv2.cvtColor(frame_read.frame, cv2.COLOR_BGR2RGB)
+            frame = cv.cvtColor(frame_read.frame, cv.COLOR_BGR2RGB)
             frame = np.rot90(frame)
             frame = pygame.surfarray.make_surface(frame)
             self.screen.blit(frame, (0, 0))
             pygame.display.update()
+
 
             time.sleep(1 / FPS)
 
