@@ -1,6 +1,6 @@
 
 
-from cv2.cv2 import VideoCapture, VideoWriter_fourcc
+
 from cv2.cv2 import VideoWriter
 from djitellopy import Tello
 import cv2 as cv
@@ -16,6 +16,7 @@ FPS = 25
 
 
 
+
 class FrontEnd(object):
     """ Maintains the Tello display and moves it through the keyboard keys.
         Press escape key to quit.
@@ -27,9 +28,11 @@ class FrontEnd(object):
             - W and S: Up and down.
     """
 
+
+
     def __init__(self):
         # Init pygame
-        self.cv = cv2
+        self.cv = cv.cv2
         pygame.init()
 
         # Creat pygame window
@@ -48,26 +51,6 @@ class FrontEnd(object):
         self.speed = 10
 
         self.send_rc_control = False
-
-        #Code added to save the capture as an mp4
-        self.name = 'yourMovie' + '.avi'
-        self.cap = cv.VideoCapture('wtf.avi')
-        self.fourcc = cv.VideoWriter_fourcc(*'DIVX')
-        self.out = VideoWriter(self.name, self.fourcc, 20.0,(640, 480))
-        while self.cap.isOpened():
-            ret, frame = self.cap.read()
-            if ret:
-                frame = self.cv.flip(frame, 0)
-                # write the flipped frame
-                self.out.write(frame)
-                self.cv.imshow('frame', frame)
-                if self.cv.waitKey(35) & 0xFF == ord('q'):
-                    break
-            else:
-                break
-        self.cap.release()
-        self.out.release()
-
 
         # create update timer
         pygame.time.set_timer(USEREVENT + 1, 50)
@@ -117,6 +100,35 @@ class FrontEnd(object):
             frame = cv.cvtColor(frame_read.frame, cv.COLOR_BGR2RGB)
             frame = np.rot90(frame)
             frame = pygame.surfarray.make_surface(frame)
+
+            cap =cv.VideoCapture(0)
+            #define the codec and create VideoWriter object
+            fourcc = cv.VideoWriter_fourcc(*'XVID')
+            out = cv.VideoWriter('myvideo.avi', fourcc, 20.0, (640,480))
+
+            while cap.isOpened():
+                ret, frame = cap.read()
+                if ret:
+                    frame = cv.flip(frame,90)
+
+                    #write the flipped frame
+                    out.write(frame)
+
+                    cv.imshow('frame',frame)
+                    if cv.waitKey(1) & 0xFF == ord('q'):
+                        break
+                else:
+                    break
+
+            cap.release()
+            out.release()
+            cv.destroyAllWindows()
+
+
+
+
+
+
             self.screen.blit(frame, (0, 0))
             pygame.display.update()
 
@@ -125,6 +137,7 @@ class FrontEnd(object):
 
         # Call it always before finishing. I deallocate resources.
         self.tello.end()
+
 
     def keydown(self, key):
         """ Update velocities based on key pressed
