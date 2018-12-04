@@ -1,21 +1,33 @@
-
-
-
-from cv2.cv2 import VideoWriter
-from djitellopy import Tello
-import cv2 as cv
-import pygame
-from pygame.locals import *
-import numpy as np
 import time
+import traceback
+import sys
+from subprocess import Popen, PIPE
+
+import cv2 as cv
+import numpy as np
+import pygame
+from djitellopy import Tello
+from pygame.locals import *
 
 # Speed of the drone
 S = 60
 # Frames per second of the pygame window display
 FPS = 25
+video_output = None
 
 
 
+
+def videoFrameHandler(event, sender, data):
+    global video_output
+    if video_output is None:
+        cmd = ['ffmpeg', '-i', 'pipe', 'tristan.mp4']
+        video_output = Popen(cmd, stdin=PIPE)
+
+    try:
+        video_output.stdin.write(data)
+    except IOError as err:
+        video_output = None
 
 class FrontEnd(object):
     """ Maintains the Tello display and moves it through the keyboard keys.
@@ -34,6 +46,7 @@ class FrontEnd(object):
         # Init pygame
         self.cv = cv.cv2
         pygame.init()
+        videoFrameHandler()
 
         # Creat pygame window
 
@@ -42,6 +55,8 @@ class FrontEnd(object):
 
         # Init Tello object that interacts with the Tello drone
         self.tello = Tello()
+
+
 
         # Drone velocities between -100~100
         self.for_back_velocity = 0
@@ -54,6 +69,8 @@ class FrontEnd(object):
 
         # create update timer
         pygame.time.set_timer(USEREVENT + 1, 50)
+
+
 
     def run(self):
 
@@ -73,8 +90,9 @@ class FrontEnd(object):
         if not self.tello.streamon():
             print("Could not start video stream")
             return
-
+        print("trying to recieve tello video to pygame")
         frame_read = self.tello.get_frame_read()
+        print("got this tello frame and put it into pygame")
 
         should_stop = False
         while not should_stop:
@@ -101,28 +119,30 @@ class FrontEnd(object):
             frame = np.rot90(frame)
             frame = pygame.surfarray.make_surface(frame)
 
-            cap =cv.VideoCapture(0)
+
+
+            # cap = self.tello.cap
             #define the codec and create VideoWriter object
-            fourcc = cv.VideoWriter_fourcc(*'XVID')
-            out = cv.VideoWriter('myvideo.avi', fourcc, 20.0, (640,480))
-
-            while cap.isOpened():
-                ret, frame = cap.read()
-                if ret:
-                    frame = cv.flip(frame,90)
-
-                    #write the flipped frame
-                    out.write(frame)
-
-                    cv.imshow('frame',frame)
-                    if cv.waitKey(1) & 0xFF == ord('q'):
-                        break
-                else:
-                    break
-
-            cap.release()
-            out.release()
-            cv.destroyAllWindows()
+            # fourcc = cv.VideoWriter_fourcc(*'H256')
+            # out = cv.VideoWriter('myvideo.mp4', fourcc, 20.0, (640,480))
+            #
+            # while cap.isOpened():
+            #     ret, frame = cap.read()
+            #     if ret:
+            #         frame = cv.flip(frame,90)
+            #
+            #         #write the flipped frame
+            #         out.write(frame)
+            #
+            #         # cv.imshow('frame',frame)
+            #         if cv.waitKey(1) & 0xFF == ord('q'):
+            #             break
+            #     else:
+            #         break
+            #
+            # cap.release()
+            # out.release()
+            # cv.destroyAllWindows()
 
 
 
@@ -189,10 +209,19 @@ class FrontEnd(object):
 
 
 def main():
-    frontend = FrontEnd()
 
-    # run frontend
-    frontend.run()
+        frontend = FrontEnd()
+
+
+# run frontend
+        try:
+            frontend.run()
+            while 1:
+                    print("Running...")
+        except Exception as ex:
+            exc_type, exc_value, exc_traceback = sys.exc_info()
+            traceback.print_exception(exc_type, exc_value, exc_traceback)
+            print(ex)
 
 
 if __name__ == '__main__':
