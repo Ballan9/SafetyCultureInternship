@@ -1,2 +1,5 @@
+.DS_Store
+/.idea/*
+
 /workingOnPrograms/TelloSDKPy/myvideo.mp4
 /workingOnPrograms/TelloSDKPy/djitellopy/__pycache__/*
