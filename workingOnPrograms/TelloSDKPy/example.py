@@ -13,21 +13,21 @@ from pygame.locals import *
 S = 60
 # Frames per second of the pygame window display
 FPS = 25
-video_output = None
+# video_output = None
 
 
 
-
-def videoFrameHandler(event, sender, data):
-    global video_output
-    if video_output is None:
-        cmd = ['ffmpeg', '-i', 'pipe', 'tristan.mp4']
-        video_output = Popen(cmd, stdin=PIPE)
-
-    try:
-        video_output.stdin.write(data)
-    except IOError as err:
-        video_output = None
+#
+# def videoFrameHandler(event, sender, data):
+#     global video_output
+#     if video_output is None:
+#         cmd = ['ffmpeg', '-i', 'pipe', 'tristan.mp4']
+#         video_output = Popen(cmd, stdin=PIPE)
+#
+#     try:
+#         video_output.stdin.write(data)
+#     except IOError as err:
+#         video_output = None
 
 class FrontEnd(object):
     """ Maintains the Tello display and moves it through the keyboard keys.
@@ -46,7 +46,7 @@ class FrontEnd(object):
         # Init pygame
         self.cv = cv.cv2
         pygame.init()
-        videoFrameHandler()
+        # videoFrameHandler()
 
         # Creat pygame window
 
@@ -91,8 +91,8 @@ class FrontEnd(object):
             print("Could not start video stream")
             return
         print("trying to recieve tello video to pygame")
-        frame_read = self.tello.get_frame_read()
-        print("got this tello frame and put it into pygame")
+        # frame_read = self.tello.get_frame_read()
+        # print("got this tello frame and put it into pygame")
 
         should_stop = False
         while not should_stop:
@@ -110,47 +110,50 @@ class FrontEnd(object):
                 elif event.type == KEYUP:
                     self.keyup(event.key)
 
-            if frame_read.stopped:
-                frame_read.stop()
-                break
+            # if frame_read.stopped:
+            #     frame_read.stop()
+            #     break
 
             self.screen.fill([0, 0, 0])
-            frame = cv.cvtColor(frame_read.frame, cv.COLOR_BGR2RGB)
-            frame = np.rot90(frame)
-            frame = pygame.surfarray.make_surface(frame)
+            # frame = cv.cvtColor(frame_read.frame, cv.COLOR_BGR2RGB)
+            # frame = np.rot90(frame)
+            # frame = pygame.surfarray.make_surface(frame)
 
 
 
-            # cap = self.tello.cap
-            #define the codec and create VideoWriter object
-            # fourcc = cv.VideoWriter_fourcc(*'H256')
-            # out = cv.VideoWriter('myvideo.mp4', fourcc, 20.0, (640,480))
-            #
-            # while cap.isOpened():
-            #     ret, frame = cap.read()
-            #     if ret:
-            #         frame = cv.flip(frame,90)
-            #
-            #         #write the flipped frame
-            #         out.write(frame)
-            #
-            #         # cv.imshow('frame',frame)
-            #         if cv.waitKey(1) & 0xFF == ord('q'):
-            #             break
-            #     else:
-            #         break
-            #
-            # cap.release()
-            # out.release()
-            # cv.destroyAllWindows()
+            cap = self.tello.get_video_capture()
+            # define the codec and create VideoWriter object
+            fourcc = cv.VideoWriter_fourcc(*'X264')
+            out = cv.VideoWriter('myvideo.mp4', fourcc, 20.0, (640,480))
+            codec = cv.CAP_PROP_FOURCC
+            print(codec)
+            while cap.isOpened():
+                print("is opened")
+                ret, frame = cap.read()
+                if ret:
+                    print("is ret")
+                    frame = cv.flip(frame,90)
+                    frame = np.rot90(frame)
+                    frame = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
 
+                    frame = pygame.surfarray.make_surface(frame)
+                    self.screen.blit(pygameFrame, (0, 0))
+                    pygame.display.update()
+                    print(frame)
+                    # print(codec)
 
+                    #write the flipped frame
+                    out.write(frame)
 
+                    # cv.imshow('frame',frame)
+                    if cv.waitKey(1) & 0xFF == ord('q'):
+                        break
+                else:
+                    break
 
-
-
-            self.screen.blit(frame, (0, 0))
-            pygame.display.update()
+            cap.release()
+            out.release()
+            cv.destroyAllWindows()
 
 
             time.sleep(1 / FPS)
@@ -211,17 +214,18 @@ class FrontEnd(object):
 def main():
 
         frontend = FrontEnd()
+        frontend.run()
 
 
 # run frontend
-        try:
-            frontend.run()
-            while 1:
-                    print("Running...")
-        except Exception as ex:
-            exc_type, exc_value, exc_traceback = sys.exc_info()
-            traceback.print_exception(exc_type, exc_value, exc_traceback)
-            print(ex)
+#         try:
+#             frontend.run()
+#             while 1:
+#                     print("Running...")
+#         except Exception as ex:
+#             exc_type, exc_value, exc_traceback = sys.exc_info()
+#             traceback.print_exception(exc_type, exc_value, exc_traceback)
+#             print(ex)
 
 
 if __name__ == '__main__':
