@@ -1,4 +1,4 @@
-import argparse
+
 import time
 import threading
 
@@ -8,13 +8,18 @@ import numpy as np
 import pygame
 from djitellopy import Tello
 from pygame.locals import *
-import imutils
+
 
 # Speed of the drone
 S = 60
 # Frames per second of the pygame window display
 FPS = 25
 # video_output = None
+
+CONFIG_FILE = "yolov3.cfg"
+# download this file from: https://pjreddie.com/media/files/yolov3.weights
+WEIGHTS_FILE = "yolov3.weights"
+CLASSES_FILE = "yolov3.classes"
 
 class FrontEnd(object):
     """ Maintains the Tello display and moves it through the keyboard keys.
@@ -112,86 +117,43 @@ class FrontEnd(object):
         args = vars(ap.parse_args())
         cap = self.tello.get_video_capture()
 
+        classes = None
+        with open(CLASSES_FILE, 'r') as f:
+            classes = [line.strip() for line in f.readlines()]
+
         # define the codec and create VideoWriter object
+        scale = 0.00392
         fourcc = cv.VideoWriter_fourcc(*'MP4V')
-        out = cv.VideoWriter('myvideo.mp4', fourcc, 30.0, (640, 480))
-        codec = cv.CAP_PROP_FOURCC
-        print(codec)
+        out = cv.VideoWriter('myvideo.mp4', fourcc, 1, (640, 480))
+        net = cv.dnn.readNet(WEIGHTS_FILE, CONFIG_FILE)
+        frameCounter = 0;
+
         while cap.isOpened() and not self.should_stop:
             ret, frame = cap.read()
             status = "No Targets"
             if ret:
-                frame = cv.flip(frame, 90)
-                frame = np.rot90(frame)
-                frame = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
 
-                #cover the frame to grayscale, blur it, and detect edges
-                gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-                blurred = cv.GaussianBlur(gray, (7, 7), 0)
-                edged = cv.Canny(blurred, 50, 150)
+                frameCounter += 1
 
-                #find contours in the edge map
-                cnts = cv.findContours(edged.copy(), cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
-                cnts = cnts[0] if imutils.is_cv2() else cnts [1]
-                print("found contours")
+                # Run analysis every second.
+                if frameCounter%30 == 0:
+                    blob = cv.dnn.blobFromImage(frame, scale, (416, 416), (0, 0, 0), True, crop=False)
+                    net.setInput(blob)
 
-                #loop over the contours
-                for c in cnts:
-                    #approx the contour
-                    peri = cv.arcLength(c, True)
-                    approx = cv.approxPolyDP(c, 0.02 * peri, True)
+                    frame = self.run_inference(net, frame, classes)
 
-                    #ensure that the approx contour is "roughly" rectangular
-                    if 4 <= len(approx) <= 6:
-                        #compute the bounding box of the approximated contour and
-                        #use the bounding box to compute the aspect ratio
-                        (x, y, w, h) = cv.boundingRect(approx)
-                        aspectRatio = w / float(h)
+                    displayFrame = cv.flip(frame, 90)
+                    displayFrame = np.rot90(displayFrame)
+                    displayFrame = cv.cvtColor(displayFrame, cv.COLOR_BGR2RGB)
 
-                        #compute the solidity of the original contour
-                        area = cv.contourArea(c)
-                        hullArea = cv.contourArea(cv.convexHull(c))
-                        solidity = area / float(hullArea)
+                    pygameFrame = pygame.surfarray.make_surface(displayFrame)
+                    self.screen.blit(pygameFrame, (0, 0))
+                    pygame.display.update()
 
-                        #compute whether or not the width and height, solidity, and
-                        #aspect ratio of the contour falls within appropriate bounds
-                        keepDims = w > 25 and h > 25
-                        keepSolidity = solidity > 0.9
-                        keepAspectRatio =   aspectRatio >= 0.8 and aspectRatio <= 1.2
+                    frame = cv.resize(frame, (640, 480))
+                    out.write(frame)
+            
 
-                        #ensure that the contour passes all our test
-                        if keepDims and keepSolidity and keepAspectRatio:
-                            #draw an aoutline around teh target and update the status
-                            # text
-                            cv.drawContours(frame, [approx], -1, (0, 0, 255), 4)
-                            status = "Target(s) Acquired"
-
-                            #compute the center of the contour region and draw the
-                            #crosshairs
-                            M = cv.moments(approx)
-                            (cX, cY) = (int(M["m10"] // M["m00"]), int(M["m01"] // M["m00"]))
-                            (startX, endX) = (int(cX - (w * 0.15)), int(cX + (w * 0.15)))
-                            (startY, endY) = (int(cY - (h * 0.15)), int(cY + (h * 0.15)))
-                            cv.line(frame, (startX, cY), (endX, cY), (0, 0, 255), 3)
-                            cv.line(frame, (cX, startY), (cX, endY), (0, 0, 255), 3)
-
-                cv.putText(frame, status, (20, 30), cv.FONT_HERSHEY_SIMPLEX, 0.5,(0, 0, 255),2)
-
-
-
-                pygameFrame = pygame.surfarray.make_surface(frame)
-                self.screen.blit(pygameFrame, (0, 0))
-                pygame.display.update()
-
-                frame = cv.resize(frame, (640, 480))
-
-                # write the flipped frame
-                # frame = np.rot90(frame)
-                frame = cv.flip(frame, 90)
-
-                out.write(frame)
-
-                # cv.imshow('frame',frame)
                 if cv.waitKey(1) & 0xFF == ord('q'):
                     break
             else:
@@ -200,6 +162,68 @@ class FrontEnd(object):
         cap.release()
         out.release()
         cv.destroyAllWindows()
+
+    def get_output_layers(self, net):
+        layer_names = net.getLayerNames()
+        output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+        return output_layers
+
+    def draw_bounding_box(self, frame, classes, class_id, confidence, x, y, x_plus_w, y_plus_h):
+        label = str(classes[class_id] + str(confidence))
+        frame = cv.rectangle(frame, (x, y), (x_plus_w, y_plus_h), [255, 0, 0], 2)
+        frame = cv.putText(frame, label, (x - 10, y - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, [255, 0, 0], 2)
+        return frame
+
+    def run_inference(self, net, frame, classes):
+        Width = frame.shape[1]
+        Height = frame.shape[0]
+
+        # run inference through the network
+        # and gather predictions from output layers
+        outs = net.forward(self.get_output_layers(net))
+
+        # initialization
+        class_ids = []
+        confidences = []
+        boxes = []
+        conf_threshold = 0.5
+        nms_threshold = 0.4
+
+        # for each detetion from each output layer
+        # get the confidence, class id, bounding box params
+        # and ignore weak detections (confidence < 0.5)
+        for out in outs:
+            for detection in out:
+                scores = detection[5:]
+                class_id = np.argmax(scores)
+                confidence = scores[class_id]
+                if confidence > 0.5:
+                    center_x = int(detection[0] * Width)
+                    center_y = int(detection[1] * Height)
+                    w = int(detection[2] * Width)
+                    h = int(detection[3] * Height)
+                    x = center_x - w / 2
+                    y = center_y - h / 2
+                    class_ids.append(class_id)
+                    confidences.append(float(confidence))
+                    boxes.append([x, y, w, h])
+
+        # apply non-max suppression
+        indices = cv.dnn.NMSBoxes(boxes, confidences, conf_threshold, nms_threshold)
+
+        # go through the detections remaining
+        # after nms and draw bounding box
+        for i in indices:
+            i = i[0]
+            box = boxes[i]
+            x = box[0]
+            y = box[1]
+            w = box[2]
+            h = box[3]
+
+            frame = self.draw_bounding_box(frame, classes, class_ids[i], confidences[i], round(x), round(y), round(x + w), round(y + h))
+
+        return frame
 
 
 
