@@ -1,11 +1,14 @@
+
 import time
 import threading
+
 
 import cv2 as cv
 import numpy as np
 import pygame
 from djitellopy import Tello
 from pygame.locals import *
+
 
 # Speed of the drone
 S = 60
@@ -108,6 +111,10 @@ class FrontEnd(object):
 
     def runVideo(self):
         print("starting video")
+        # cap = self.tello.get_video_capture(args["video"])
+        ap = argparse.ArgumentParser()
+        ap.add_argument("-v", "--video", help="path to the video file")
+        args = vars(ap.parse_args())
         cap = self.tello.get_video_capture()
 
         classes = None
@@ -123,7 +130,9 @@ class FrontEnd(object):
 
         while cap.isOpened() and not self.should_stop:
             ret, frame = cap.read()
+            status = "No Targets"
             if ret:
+
                 frameCounter += 1
 
                 # Run analysis every second.
@@ -143,6 +152,7 @@ class FrontEnd(object):
 
                     frame = cv.resize(frame, (640, 480))
                     out.write(frame)
+            
 
                 if cv.waitKey(1) & 0xFF == ord('q'):
                     break
@@ -214,6 +224,9 @@ class FrontEnd(object):
             frame = self.draw_bounding_box(frame, classes, class_ids[i], confidences[i], round(x), round(y), round(x + w), round(y + h))
 
         return frame
+
+
+
 
 
     def keydown(self, key):
