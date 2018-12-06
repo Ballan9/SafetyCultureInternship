@@ -16,7 +16,7 @@ S = 60
 FPS = 25
 # video_output = None
 
-CONFIG_FILE = "yolov3.cfg"
+CONFIG_FILE = "yolo.cfg"
 # download this file from: https://pjreddie.com/media/files/yolov3.weights
 WEIGHTS_FILE = "yolov3.weights"
 CLASSES_FILE = "yolov3.classes"
@@ -151,6 +151,7 @@ class FrontEnd(object):
                     pygame.display.update()
 
                     frame = cv.resize(frame, (640, 480))
+                    cv2.imwrite('imageTEST.jpg', frame)
                     out.write(frame)
             
 
