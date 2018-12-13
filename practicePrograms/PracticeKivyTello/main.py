@@ -53,18 +53,18 @@ class KivyTelloRoot(BoxLayout):
 
     def on_state_rotcw(self, instance, value):
         if value == 'down':
-            print('start cw')
+            print('Start clockwise')
             self.drone.clockwise(50)
         else:
-            print('stop cw')
+            print('Stop clockwise')
             self.drone.clockwise(0)
 
     def on_state_rotccw(self, instance, value):
         if value == 'down':
-            print('start ccw')
+            print('Start anti-clockwise')
             self.drone.counter_clockwise(50)
         else:
-            print('stop ccw')
+            print('Stop anti-clockwise')
             self.drone.counter_clockwise(0)
 
     def on_pad_left(self, instance, value):
@@ -72,7 +72,7 @@ class KivyTelloRoot(BoxLayout):
         self.stick_data[IDX_YAW] = x
         self.stick_data[IDX_THR] = y
         self.ids.pad_left.ids.label.text = \
-            'THR: {0:f}\n' \
+            'THROTTLE: {0:f}\n' \
             'YAW: {1:f}'.format(self.stick_data[IDX_THR],
                                 self.stick_data[IDX_YAW])
         self.drone.set_throttle(self.stick_data[IDX_THR])
