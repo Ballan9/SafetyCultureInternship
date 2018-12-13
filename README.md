@@ -5,12 +5,12 @@
 
 1.Clone repo
 
-2. Go into interns\workingOnPrograms\TelloSDKPy
+2. Go into interns\WorkingPrograms\TelloSDKPy
 3. pip install requirements.txt or install each of the packages from requirements.txt
 
-4. Run example.py 
-  *example.py has a few functions that are commented out as I am still trying to get the livestream and record going. The live stream and record from my laptop webcam works. But i struggle to get the decoding done right. 
-
+4. Run pyGameVideoTest.py 
+  *This will live stream onto your computer and record this video saved as myvideo.mp4
+  
 This repo consists of a few different collections of repos that are able to control the drone and streams video back onto your pc
 The goBot folder is all written in go, due to my lack of previous knowledge of working with go I could not figure out how to get the streaming to pc service working. 
 
