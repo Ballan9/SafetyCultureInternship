@@ -2,12 +2,12 @@ import pygame
 
 pygame.init()
 
-white = (255, 255, 255, 0)  # (R.G.B)
-red = (1, 1, 1, 0)
+white = (255, 255, 255, 0)  # (R.G.B) cursor
+black = (1, 1, 1, 0)  # background
 
 
 def main():
-    game_display = pygame.display.set_mode((1300, 650))  # size of display screen
+    screen = pygame.display.set_mode((1300, 650))  # size of display screen
     pygame.display.set_caption("Joystick Testing / Xbox 360 Controller")
     pygame.display.update()
     game_exit = False
@@ -32,17 +32,17 @@ def main():
                 game_exit = True
         if event.type == pygame.JOYBUTTONDOWN:
             if event.button == 3:
-                lead_y -= 10  # Y = Up
+                lead_y -= 10  # (3) Y = Up
             elif event.button == 0:
-                lead_y += 10  # A = Down
+                lead_y += 10  # (0) A = Down
             elif event.button == 2:
-                lead_x -= 10  # X = Left
+                lead_x -= 10  # (2) X = Left
             else:
-                lead_x += 10  # B = Right
+                lead_x += 10  # (1) B = Right
 
-        game_display.fill(red)
+        screen.fill(black)
 
-        pygame.draw.rect(game_display, white, [lead_x, lead_y, 20, 20])
+        pygame.draw.rect(screen, white, [lead_x, lead_y, 20, 20])
 
         pygame.display.update()
     pygame.quit()
