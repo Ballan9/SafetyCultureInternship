@@ -16,10 +16,10 @@ S = 60
 FPS = 25
 # video_output = None
 
-CONFIG_FILE = "yolov3.cfg"
+CONFIG_FILE = "yolo-obj.cfg"
 # download this file from: https://pjreddie.com/media/files/yolov3.weights
-WEIGHTS_FILE = "yolov3.weights"
-CLASSES_FILE = "yolov3.classes"
+WEIGHTS_FILE = "yolo-obj.weights"
+CLASSES_FILE = "yolo-obj.classes"
 
 class FrontEnd(object):
     """ Maintains the Tello display and moves it through the keyboard keys.
@@ -112,9 +112,9 @@ class FrontEnd(object):
     def runVideo(self):
         print("starting video")
         # cap = self.tello.get_video_capture(args["video"])
-        ap = argparse.ArgumentParser()
-        ap.add_argument("-v", "--video", help="path to the video file")
-        args = vars(ap.parse_args())
+        # ap = argparse.ArgumentParser()
+        # ap.add_argument("-v", "--video", help="path to the video file")
+        # args = vars(ap.parse_args())
         cap = self.tello.get_video_capture()
 
         classes = None
@@ -126,7 +126,7 @@ class FrontEnd(object):
         fourcc = cv.VideoWriter_fourcc(*'MP4V')
         out = cv.VideoWriter('myvideo.mp4', fourcc, 1, (640, 480))
         net = cv.dnn.readNet(WEIGHTS_FILE, CONFIG_FILE)
-        frameCounter = 0;
+        frameCounter = 0
 
         while cap.isOpened() and not self.should_stop:
             ret, frame = cap.read()
@@ -222,6 +222,8 @@ class FrontEnd(object):
             h = box[3]
 
             frame = self.draw_bounding_box(frame, classes, class_ids[i], confidences[i], round(x), round(y), round(x + w), round(y + h))
+            # cv.imwrite("fireextiguisher.jpeg", frame)
+
 
         return frame
 
